@@ -71,7 +71,7 @@ const newTask = ref({
 
 const editingTask = ref(false);
 
-// Jika ada task yang diedit
+
 watch(() => taskStore.taskToEdit, (task) => {
   if (task) {
     newTask.value = { ...task };
@@ -85,7 +85,7 @@ const handleSubmit = () => {
   } else {
     taskStore.addTask({
       ...newTask.value,
-      id: Date.now() // Generate simple ID
+      id: Date.now() 
     });
   }
   resetForm();
@@ -110,65 +110,157 @@ const resetForm = () => {
 
 <style scoped>
 .task-form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+input, textarea, select {
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 1.25rem;
 }
+
+
+.submit-btn, .cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cancel-btn {
+  background-color: #f1f5f9;
+  color: #64748b;
+  margin-left: 0.75rem;
+}
+
+.cancel-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.submit-btn .icon, .cancel-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
 
 label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 0.95rem;
 }
 
 input[type="text"], 
 textarea, 
 select {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 0.75rem;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
 }
 
 textarea {
-  height: 80px;
+  height: 100px;
+  resize: vertical;
 }
 
 .priority-options {
   display: flex;
-  gap: 15px;
-  margin-top: 5px;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.priority-options label {
+.priority-option {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-weight: normal;
-}
-
-button {
-  padding: 8px 15px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 4px;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #f8fafc;
   cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+  font-size: 0.95rem;
 }
 
-.submit-btn {
-  background-color: #4CAF50;
-  color: white;
+.priority-option:hover {
+  border-color: #cbd5e1;
 }
 
-.cancel-btn {
-  background-color: #f44336;
-  color: white;
+.priority-option.active {
+  background: #e0e7ff;
+  border-color: #818cf8;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+.custom-radio {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #94a3b8;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.active .custom-radio {
+  border-color: #4f46e5;
+  background-color: #4f46e5;
+}
+
+.active .custom-radio::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Untuk tampilan mobile */
+@media (max-width: 640px) {
+  .priority-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .priority-option {
+    width: 100%;
+  }
 }
 </style>

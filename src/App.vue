@@ -75,79 +75,101 @@ const sortedTasks = computed(() => {
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .app-header {
   text-align: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e5eb;
 }
 
 .app-header h1 {
   color: #2c3e50;
   margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .app-header p {
   color: #7f8c8d;
-  margin: 5px 0 0;
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
 }
 
 .app-main {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 30px;
+  grid-template-columns: 300px 1fr; /* Lebih proporsional */
+  gap: 2rem;
+  align-items: start;
 }
 
 .task-form-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .task-list-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-list-container h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .sort-controls {
-  margin: 15px 0;
+  margin: 1rem 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.75rem;
+}
+
+.sort-controls label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
 }
 
 .sort-controls select {
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 0.9rem;
 }
 
 .task-list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.task-list li {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .loading, .empty-state {
   text-align: center;
-  padding: 20px;
+  padding: 2rem;
   color: #7f8c8d;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   .app-main {
     grid-template-columns: 1fr;
+  }
+  
+  .app-container {
+    padding: 1.5rem;
   }
 }
 </style>
