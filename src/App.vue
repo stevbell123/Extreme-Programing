@@ -38,8 +38,8 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useTaskStore } from './store/taskStore';
-import TaskForm from './components/TaskForm.vue';
-import TaskItem from './components/TaskItem.vue';
+import TaskForm from './components/taskform.vue';
+import TaskItem from './components/taskitem.vue';
 
 const taskStore = useTaskStore();
 const sortBy = ref('priority');
