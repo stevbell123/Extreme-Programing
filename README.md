@@ -1,3 +1,4 @@
+
 # 📋 Task Management App - Kelompok 5
 
 ## 👨‍💻 Tim Pengembang
@@ -57,3 +58,4 @@ Berikut daftar kebutuhan pengguna yang kami implementasikan:
 | 6  | Sebagai pengguna, saya ingin task saya tersimpan secara permanen agar tidak hilang saat me-refresh halaman. | 5 | Tinggi |
 | 7  | Sebagai pengguna, saya ingin melihat pesan error validasi jika mencoba membuat task tanpa judul. | 2 | Sedang |
 | 8  | Sebagai pengguna, saya ingin bisa memfilter task berdasarkan status agar mudah melacak progres pekerjaan. | 3 | Sedang |
+
