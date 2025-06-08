@@ -1,0 +1,104 @@
+:root {
+  --primary: #6366f1;   /* Ungu modern */
+  --secondary: #f43f5e; /* Merah muda */
+  --accent: #14b8a6;    /* Teal */
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 20px;
+}
+
+#app {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+textarea {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+/* Tombol */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+}
+
+/* Daftar Tugas */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-item {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  border-left: 4px solid var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item.done {
+  opacity: 0.7;
+  text-decoration: line-through;
+  border-left-color: var(--secondary);
+}
+
+.task-item button {
+  background-color: var(--secondary);
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.task-item button:hover {
+  background-color: #e11d48;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  #app {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
