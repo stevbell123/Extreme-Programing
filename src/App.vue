@@ -37,7 +37,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { useTaskStore } from './stores/taskStore';
+import { useTaskStore } from './store/taskStore';
 import TaskForm from './components/TaskForm.vue';
 import TaskItem from './components/TaskItem.vue';
 

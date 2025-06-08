@@ -29,7 +29,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useTaskStore } from '../stores/taskStore';
+import { useTaskStore } from '../store/taskStore';
 
 const props = defineProps({
   task: {

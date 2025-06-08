@@ -55,7 +55,7 @@
 
 <script setup>
 import { ref, watch } from 'vue';
-import { useTaskStore } from '../stores/taskStore';
+import { useTaskStore } from '../store/taskStore';
 
 const taskStore = useTaskStore();
 const priorities = ['low', 'medium', 'high'];
