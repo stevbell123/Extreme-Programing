@@ -36,13 +36,13 @@
 |-------|--------|------------|
 | **Menambah/mengedit/menghapus task** | [x] Selesai | Dapat membuat, mengubah, dan menghapus daftar tugas |
 | **Melihat daftar task dengan pengurutan prioritas** | [x] Selesai | Penyortiran otomatis (Tinggi > Sedang > Rendah) |
-| **Menambahkan deskripsi detail dan memperbarui status task** | [x] Selesai | Dilengkapi pilihan status: |
+| **Menambahkan deskripsi untuk menampilkan detail dan memperbarui status task** | [x] Selesai | Dilengkapi pilihan status agar bisa dilihat dengan mudah: |
 | | | • 🟠 To-do |
 | | | • 🔵 In-progress |
 | | | • 🟢 Done |
-| **Filter task berdasarkan status** | [x] Selesai | Dapat menyaring sesuai kebutuhan |
+| **Filter task berdasarkan status** | [x] Selesai | Dapat memfilter sesuai kebutuhan |
 | **Penyimpanan data permanen (localStorage)** | [x] Selesai | Data tetap tersimpan setelah refresh |
-| **Validasi form real-time untuk judul task** | [x] Selesai | Peringatan jika judul tidak valid |
+| **Validasi form real-time untuk judul task** | [x] Selesai | Peringatan jika judul tidak sesuai |
 | **Antarmuka responsif dan bersih** | [x] Selesai | Tampilan optimal di semua perangkat |
 
 ## 🎯 User Stories
