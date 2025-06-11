@@ -59,11 +59,13 @@ Berikut daftar kebutuhan pengguna yang kami implementasikan:
 | 7  | Sebagai pengguna, saya ingin melihat pesan error validasi jika mencoba membuat task tanpa judul. | 2 | Sedang |
 | 8  | Sebagai pengguna, saya ingin bisa memfilter task berdasarkan status agar mudah melacak progres pekerjaan. | 3 | Sedang |
 
+# Vercel: https://extreme-programing-nine.vercel.app/
+
 # Clone the repository
 git clone https://github.com/stevbell123/Extreme-Programing.git
 
 # Navigate into the project
-cd Project-Task-Management
+cd Extreme-Programing
 
 # Install dependencies
 npm install
