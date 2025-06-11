@@ -61,15 +61,5 @@ Berikut daftar kebutuhan pengguna yang kami implementasikan:
 
 
 
-# Clone the repository
-git clone https://github.com/stevbell123/Extreme-Programing.git
 
-# Navigate into the project
-cd Project-Task-Management
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
 
